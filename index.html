@@ -1,0 +1,204 @@
+---
+layout: default_feria
+---
+<div class="main main-raised">
+	<div class="section">
+		<div class="container">
+			<div id="mainheader" class="row">
+				<div class="col-xs-12 col-md-6">
+					<a href="#" class="navbar-link">Facultad de Ingeniería</a>
+					<h3>FERIA DEL EMPLEO 2019</h3>
+					<h4 class="short_headline">
+						<span>
+							<img src="images/icono_feria.png" style="height:20px" alt="">
+							{{ site.data.generalinfo.index_dates }}
+						</span>
+					</h4>
+					<div class="row">
+						<div class="col-xs-12 col-md-12">
+							<a href="#" class="thumbnail">
+								<img src="images/conferencias-peque.jpg" alt="stands">
+							</a>
+						</div>
+					</div>
+					<h6><span>{{ site.data.generalinfo.index_place }}</span></h6>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<div class="rombocontainer" style="float: left; width: 400px;">
+						<div class="hex2-row">
+							<div class="hex2"><div class="left"></div><div class="middle"></div><div class="right"></div></div>
+							<div class="hex2 even2"><div class="left"></div>
+							<div class="middle">
+								<div class="iconos">
+									<a href="horarios.html">
+										<i class="icon-clock" title="Horarios"></i>
+										<span class="text-center">HORARIOS</span>
+									</a>
+								</div>
+							</div>
+							<div class="right"></div></div>
+							<div class="hex2"><div class="left"></div><div class="middle"></div><div class="right"></div></div>
+							<div class="hex2 even2"><div class="left"></div><div class="middle"></div><div class="right"></div></div>
+						</div>
+						<div class="hex2-row">
+							<div class="hex2"><div class="left"></div>
+							<div class="middle">
+								<div class="iconos">
+									<a href="empresas.html">
+										<i class="icon-building" title="Empresas"></i>
+										<span class="text-center">EMPRESAS</span>
+									</a>
+								</div>
+							</div>
+							<div class="right"></div></div>
+							<div class="hex2 even2"><div class="left"></div><div class="middle"></div><div class="right"></div></div>
+							<div class="hex2"><div class="left"></div>
+							<div class="middle">
+								<div class="iconos">
+									<a href="platicas.html">
+										<i class="icon-users2" title="Platicas"></i>
+										<span class="text-center">PLÁTICAS</span>
+									</a>
+								</div>
+							</div>
+							<div class="right"></div></div>
+							<div class="hex2 even2"><div class="left"></div>
+							<div class="middle">
+								<div class="iconos">
+									<a href="stands.html">
+										<i class="icon-map-marker" title="Stands"></i>
+										<span class="text-center">STANDS</span>
+									</a>
+								</div>
+							</div>
+							<div class="right"></div></div>
+						</div>
+						<div class="hex2-row">
+							<div class="hex2"><div class="left"></div><div class="middle"></div><div class="right"></div></div>
+							<div class="hex2 even2"><div class="left"></div><div class="middle"></div><div class="right"></div></div>
+							<div class="hex2"><div class="left"></div><div class="middle"></div><div class="right"></div></div>
+							<div class="hex2 even2"><div class="left"></div><div class="middle"></div><div class="right"></div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+    	</div>
+    	<hr class="lineferia container" />
+		<div class="container">
+			<div id="mainheader" class="row">
+				<div class="col-xs-12 col-md-8">
+					<h3 class="primary-color">Expo Feria del empleo</h3>
+					<span>{{ site.data.generalinfo.index_paragraph01 }}</span><br />
+					<span>{{ site.data.generalinfo.index_paragraph02 }}</span>
+        		</div>
+				<div class="col-xs-12 col-md-4">
+					<a href="#" class="thumbnail">
+						<img src="images/stands-peque.jpg" alt="...">
+					</a>
+				</div>
+			</div>
+    	</div>
+    	<hr class="lineferia container" />
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 ml-auto mr-auto">
+					<h2 class="title">Empresas que nos acompañan</h2>
+				</div>
+				<div class="col-md-6 ml-auto mr-auto">
+					<br />
+					<div class="">
+						<div class="full-width-slider-wrapper clearfix">
+							<div class="full-width-slider flexslider">
+								<ul class="slides">
+								{% for company in site.data.companies.companies %}
+									<li><img alt="" src="{{ company.logourl }}"><span></span></li>
+								{% endfor %}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h4><i class="icon-clock"></i> Horarios de Presentaciones</h4>
+						</div>
+						<div class="panel-body">
+							<p>{{ site.data.generalinfo.index_paragraph03 }}</p>
+							<p>{{ site.data.generalinfo.index_paragraph04 }}</p>
+							<p><a href="#" class="btn btn-primary" role="button">Horarios</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h4><i class="icon-users2"></i> Pláticas y reclutamientos</h4>
+						</div>
+						<div class="panel-body">
+							<p>Durante la feria contaremos con interesantes pláticas y reclutamientos.</p>
+							<p>Próximamente publicaremos información de ellas.</p>
+							<p><a href="#" class="btn btn-primary" role="button">Información Expositores</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h4><i class="icon-map"></i> Stands de Expositores</h4>
+						</div>
+						<div class="panel-body">
+							<p>Conoce la ubicación de Nuestros invitados</p>
+							<p>Encuentra la empresa a la que te interesa conocer</p>
+							<p><a href="#" class="btn btn-primary" role="button">Encuentra la Ubicación</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="page" class="clearfix">
+	<div class="main-content container">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="well">
+					<h4 class="primary-color">¿Cómo llegar?</h4>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.8721809638523!2d-99.1844845!3d19.331351999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0020ce0c7dc9%3A0xa56d188ae95369f0!2sUNAM+Facultad+de+Ingenier%C3%ADa!5e0!3m2!1ses!2smx!4v1441848297372" width="200" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<h5 class="primary-color">Transporte público</h5>
+					<p>
+						<a href="{{ site.data.generalinfo.index_metro_url }}" parent="_blank">{{ site.data.generalinfo.index_metro_title }}</a>  | 
+						<a href="{{ site.data.generalinfo.index_metro_url }}" parent="_blank">{{ site.data.generalinfo.index_metrobus_title }}</a>
+					</p>
+						<h5 class="primary-color">Transporte interno CU</h5>
+					<p><a href="http://www.pumabus.unam.mx/" parent="_blank">Pumabus</a>: Ruta 1, ruta 7 y ruta 8 Parada Ingeniería  </p>
+				</div>
+			</div>
+			<div class="rotating-testimonials col-sm-6" data-easytabs="true">
+				<h3 class="short_headline">
+					<span>Últimas noticias</span>
+				</h3>
+				<div class="panels">
+					<div id="t1"><blockquote><p>No olvides traer varias copias de tu CV a la feria.</p></blockquote></div>
+					<div id="t1"><blockquote><p>Habrá un stand de la Bolsa Universitaria de trabajo donde pueden orientarte en la elaboración de tu CV.</p></blockquote></div>
+					<div id="t1"><blockquote><p>Acompáñanos en la inauguración de la Feria este lunes 23 de abril 11:15 horas. Vestíbulo Auditorio Javier Barros Sierra.</p></blockquote></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+      {% for company in site.data.companies.companies %}
+      <div class="col-sm-3 col-md-2">
+        <div class="thumbnail">
+			<a href="{{ company.siteurl }}" target="_blank" >
+          		<img src="{{ company.logourl }}" style="height:40px;" title="{{ company.name }}">
+			</a>
+        </div>
+      </div>
+      {% endfor %}
+		</div>
+	</div>
+</div>
