@@ -8,7 +8,7 @@
  *
  * Open source under the BSD License.
  *
- * Copyright © 2008 George McGinley Smith
+ * Copyright ï¿½ 2008 George McGinley Smith
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -177,7 +177,7 @@ jQuery.extend( jQuery.easing,
  *
  * Open source under the BSD License.
  *
- * Copyright © 2001 Robert Penner
+ * Copyright ï¿½ 2001 Robert Penner
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -722,20 +722,6 @@ Thanks to Philip Thrasher for the jquery plugin boilerplate for coffee script
  * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
  */
 (function(e){e.fn.appear=function(t,n){var r=e.extend({data:undefined,one:true,accX:0,accY:0},n);return this.each(function(){var n=e(this);n.appeared=false;if(!t){n.trigger("appear",r.data);return}var i=e(window);var s=function(){if(!n.is(":visible")){n.appeared=false;return}var e=i.scrollLeft();var t=i.scrollTop();var s=n.offset();var o=s.left;var u=s.top;var a=r.accX;var f=r.accY;var l=n.height();var c=i.height();var h=n.width();var p=i.width();if(u+l+f>=t&&u<=t+c+f&&o+h+a>=e&&o<=e+p+a){if(!n.appeared)n.trigger("appear",r.data)}else{n.appeared=false}};var o=function(){n.appeared=true;if(r.one){i.unbind("scroll",s);var o=e.inArray(s,e.fn.appear.checks);if(o>=0)e.fn.appear.checks.splice(o,1)}t.apply(this,arguments)};if(r.one)n.one("appear",r.data,o);else n.bind("appear",r.data,o);i.scroll(s);e.fn.appear.checks.push(s);s()})};e.extend(e.fn.appear,{checks:[],timeout:null,checkAll:function(){var t=e.fn.appear.checks.length;if(t>0)while(t--)e.fn.appear.checks[t]()},run:function(){if(e.fn.appear.timeout)clearTimeout(e.fn.appear.timeout);e.fn.appear.timeout=setTimeout(e.fn.appear.checkAll,20)}});e.each(["append","prepend","after","before","attr","removeAttr","addClass","removeClass","toggleClass","remove","css","show","hide"],function(t,n){var r=e.fn[n];if(r){e.fn[n]=function(){var t=r.apply(this,arguments);e.fn.appear.run();return t}}})})(jQuery);
-
-
-
-
-/*!
- * animsition v3.4.1
- * http://blivesta.github.io/animsition/
- * Licensed under MIT
- * Author : blivesta
- * http://blivesta.com/
- */
-!function(n){"use strict";var a="animsition",i={init:function(t){t=n.extend({inClass:"fade-in",outClass:"fade-out",inDuration:1500,outDuration:800,linkElement:".animsition-link",loading:!0,loadingParentElement:"body",loadingClass:"animation-loading",loadingHtml:'<div class="css3-spinner-bounce1"></div><div class="css3-spinner-bounce2"></div><div class="css3-spinner-bounce3"></div>',unSupportCss:["animation-duration","-webkit-animation-duration","-o-animation-duration"],overlay:!1,overlayClass:"animsition-overlay-slide",overlayParentElement:"body"},t);var o=i.supportCheck.call(this,t);if(!o)return"console"in window||(window.console={},window.console.log=function(n){return n}),console.log("Animsition does not support this browser."),i.destroy.call(this);var e=i.optionCheck.call(this,t);return e&&i.addOverlay.call(this,t),t.loading&&i.addLoading.call(this,t),this.each(function(){var o=this,e=n(this),s=n(window),l=e.data(a);l||(t=n.extend({},t),e.data(a,{options:t}),s.on("load."+a+" pageshow."+a,function(){i.pageIn.call(o)}),s.on("unload."+a,function(){}),n(t.linkElement).on("click."+a,function(a){a.preventDefault();var t=n(this);i.pageOut.call(o,t)}))})},addOverlay:function(a){n(a.overlayParentElement).prepend('<div class="'+a.overlayClass+'"></div>')},addLoading:function(a){n(a.loadingParentElement).append('<div class="'+a.loadingClass+'">'+a.loadingHtml+"</div>")},removeLoading:function(){var i=n(this),t=i.data(a).options,o=n(t.loadingParentElement).children("."+t.loadingClass);o.fadeOut().remove()},supportCheck:function(a){var i=n(this),t=a.unSupportCss,o=t.length,e=!1;0===o&&(e=!0);for(var s=0;o>s;s++)if("string"==typeof i.css(t[s])){e=!0;break}return e},optionCheck:function(a){var i,t=n(this);return i=a.overlay||t.data("animsition-overlay")?!0:!1},animationCheck:function(i,t,o){var e=n(this),s=e.data(a).options,l=typeof i,r=!t&&"number"===l,c=t&&"string"===l&&i.length>0;return r||c?i=i:t&&o?i=s.inClass:!t&&o?i=s.inDuration:t&&!o?i=s.outClass:t||o||(i=s.outDuration),i},pageIn:function(){var t=this,o=n(this),e=o.data(a).options,s=o.data("animsition-in-duration"),l=o.data("animsition-in"),r=i.animationCheck.call(t,s,!1,!0),c=i.animationCheck.call(t,l,!0,!0),d=i.optionCheck.call(t,e);e.loading&&i.removeLoading.call(t),d?i.pageInOverlay.call(t,c,r):i.pageInBasic.call(t,c,r)},pageInBasic:function(a,i){var t=n(this);t.css({"animation-duration":i/1e3+"s"}).addClass(a).animateCallback(function(){t.removeClass(a).css({opacity:1})})},pageInOverlay:function(i,t){var o=n(this),e=o.data(a).options;o.css({opacity:1}),n(e.overlayParentElement).children("."+e.overlayClass).css({"animation-duration":t/1e3+"s"}).addClass(i)},pageOut:function(t){var o=this,e=n(this),s=e.data(a).options,l=t.data("animsition-out"),r=e.data("animsition-out"),c=t.data("animsition-out-duration"),d=e.data("animsition-out-duration"),u=l?l:r,m=c?c:d,h=i.animationCheck.call(o,u,!0,!1),p=i.animationCheck.call(o,m,!1,!1),v=i.optionCheck.call(o,s),f=t.attr("href");v?i.pageOutOverlay.call(o,h,p,f):i.pageOutBasic.call(o,h,p,f)},pageOutBasic:function(a,i,t){var o=n(this);o.css({"animation-duration":i/1e3+"s"}).addClass(a).animateCallback(function(){location.href=t})},pageOutOverlay:function(t,o,e){var s=this,l=n(this),r=l.data(a).options,c=l.data("animsition-in"),d=i.animationCheck.call(s,c,!0,!0);n(r.overlayParentElement).children("."+r.overlayClass).css({"animation-duration":o/1e3+"s"}).removeClass(d).addClass(t).animateCallback(function(){l.css({opacity:0}),location.href=e})},destroy:function(){return this.each(function(){var i=n(this);n(window).unbind("."+a),i.css({opacity:1}).removeData(a)})}};n.fn.animateCallback=function(a){var i="animationend webkitAnimationEnd mozAnimationEnd oAnimationEnd MSAnimationEnd";return this.each(function(){n(this).bind(i,function(){return n(this).unbind(i),a.call(this)})})},n.fn.animsition=function(t){return i[t]?i[t].apply(this,Array.prototype.slice.call(arguments,1)):"object"!=typeof t&&t?void n.error("Method "+t+" does not exist on jQuery."+a):i.init.apply(this,arguments)}}(jQuery);
-
-
 
 
 /*! Stellar.js v0.6.2 | Copyright 2013, Mark Dalgleish | http://markdalgleish.com/projects/stellar.js | http://markdalgleish.mit-license.org */
