@@ -87,6 +87,14 @@ companies:
   abstract: El pensamiento emprendedor es parte de nuestra identidad. Únete a nuestros equipos diversos y globales y comienza cada día convirtiendo tus ideas en realidad. Puedes elegir entre innumerables oportunidades y desarrollar tu carrera al mismo tiempo que das forma activamente a las marcas y tecnologías de Henkel.
   stand: S/A
  
+- siteurl: https://www-05.ibm.com/employment/mx-es/?lnk=mca_mxes
+  logourl: images/companies/ibm.jpg
+  name: IBM
+  carreras: Computación, Telecomunicaciones
+  teaser: En IBM, el trabajo es más que un empleo, es una llamada. A construir. Diseñar. Crear código. Consultar. 
+  abstract: En IBM, el trabajo es más que un empleo, es una llamada. A construir. Diseñar. Crear código. Consultar. Pensar junto con los clientes y vender. Crear mercados. Inventar. Colaborar. No solo hacer algo mejor, sino intentar cosas que usted nunca pensó que fueran posibles. Liderar en esta nueva era de tecnología y resolver algunos de los problemas más desafiantes del mundo. Hagamos que la inteligencia trabaje.
+  stand: S/A
+
 - siteurl: http://career.huawei.com/reccampportal/#campus4/content.html
   logourl: images/companies/huawei.png
   name: Huawei
@@ -94,7 +102,7 @@ companies:
   teaser: Heroes may come from anywhere. Everyone who makes a contribution should be rewarded
   abstract: Heroes may come from anywhere. Everyone who makes a contribution should be rewarded. Come and experience customer centricity and inspiring dedication, and build a Better Connected World with us
   stand: S/A
- 
+
 - siteurl: https://www.ica.com.mx/ica-fluor
   logourl: images/companies/icafluor.jpg
   name: Ica Fluor
